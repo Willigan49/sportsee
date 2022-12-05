@@ -1,8 +1,9 @@
-@use "sass:map";
 @use "./utils/variables" as v;
+@use "./utils/mixins" as m;
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 @import "../components/Header/Header";
 @import "../components/Menu/Menu";
+@import "../components/Drawer/Drawer";
 
 * {
   box-sizing: border-box;
@@ -16,8 +17,7 @@ body {
 
 .wrapper {
   max-width: 1024px;
-  width: v.$full-size;
+  @include m.box-sizer(100%, 780px);
   margin: auto;
-  height: 780px;
-  color: map.get(v.$colors, "white");
+  color: map-get(v.$colors, "white");
 }

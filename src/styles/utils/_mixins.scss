@@ -1,0 +1,11 @@
+@use "../../styles/utils/variables" as v;
+
+@mixin flex-column{
+    display: v.$flex;
+    flex-direction: column;
+}
+
+@mixin box-sizer($width, $height) {
+    width: $width;
+    height: $height;
+}

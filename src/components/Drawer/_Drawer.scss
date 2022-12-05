@@ -1,0 +1,34 @@
+@use "../../styles/utils/variables" as v;
+@use "../../styles/utils/mixins" as m;
+
+.drawer {
+  height: v.$full-size;
+  width: 11%;
+  padding: map-get(v.$padding, "20");
+  background-color: map-get(v.$colors, "black");
+  height: v.$full-size;
+  @include m.flex-column;
+  justify-content: v.$space-evenly;
+  align-items: v.$align-center;
+  ul {
+    @include m.flex-column;
+    align-items: v.$align-center;
+    justify-content: v.$space-between;
+    padding-left: 0;
+    height: 40%;
+  }
+  li {
+    background-color: map-get(v.$colors, "white");
+    @include m.box-sizer(60px, 60px);
+    border-radius: 10px;
+    cursor: v.$cursor-pointer;
+    display: v.$flex;
+    align-items: v.$align-center;
+    justify-content: center;
+  }
+  p {
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    font-size: map-get(v.$font-size, "12");
+  }
+}
