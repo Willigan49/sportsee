@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "../../styles/utils/variables" as v;
+.header {
+  background-color: map.get(v.$colors, "black");
+  height: 10vh;
+  padding: 20px;
+  display: v.$flex;
+  align-items: center;
+  img {
+    max-width: v.$full-size;
+  }
+}

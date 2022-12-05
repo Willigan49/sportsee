@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "./utils/variables" as v;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import "../components/Header/Header";
+@import "../components/Menu/Menu";
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  max-width: 1024px;
+  width: v.$full-size;
+  margin: auto;
+  height: 780px;
+  color: map.get(v.$colors, "white");
+}
