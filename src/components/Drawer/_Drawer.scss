@@ -3,10 +3,9 @@
 
 .drawer {
   height: v.$full-size;
-  width: 11%;
+  @include m.box-sizer(11%, 100%);
   padding: map-get(v.$padding, "20");
   background-color: map-get(v.$colors, "black");
-  height: v.$full-size;
   @include m.flex-column;
   justify-content: v.$space-evenly;
   align-items: v.$align-center;
@@ -30,5 +29,6 @@
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     font-size: map-get(v.$font-size, "12");
+    color: map-get(v.$colors, "white");
   }
 }

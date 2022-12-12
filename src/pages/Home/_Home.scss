@@ -1,0 +1,58 @@
+@use "../../styles/utils/variables" as v;
+@use "../../styles/utils/mixins" as m;
+
+.home {
+  @include m.flex-column;
+  justify-content: v.$space-between;
+  padding: 20px 100px 100px;
+  @include m.box-sizer(100%, 100%);
+  span {
+    color: map-get(v.$colors, "red");
+  }
+  p {
+    font-size: map-get(v.$font-size, "18");
+  }
+  .stats {
+    margin-top: 30px;
+    @include m.box-sizer(100%, 100%);
+    display: v.$flex;
+    justify-content: v.$space-between;
+    gap: 20px;
+  }
+}
+
+.graphics {
+  width: v.$full-size;
+  @include m.flex-column;
+  justify-content: v.$space-between;
+  gap: 20px;
+  .daily-activities {
+    background-color: map-get(v.$colors, "grey");
+    @include m.box-sizer(100%, 100%);
+    border-radius: 10px;
+  }
+}
+
+.calories {
+  @include m.flex-column;
+  justify-content: v.$space-between;
+  width: 35%;
+  gap: 20px;
+  div {
+    border-radius: 10px;
+    background-color: map-get(v.$colors, "grey");
+    @include m.box-sizer(100%, 100%);
+  }
+}
+
+.graphics-bottom {
+  @include m.box-sizer(100%, 85%);
+  border-radius: 10px;
+  display: v.$flex;
+  justify-content: space-between;
+  gap: 20px;
+  div {
+    width: 100%;
+    background-color: map-get(v.$colors, "grey");
+  }
+}

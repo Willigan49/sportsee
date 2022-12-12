@@ -9,4 +9,5 @@
   img {
     max-width: v.$full-size;
   }
+  color: map-get(v.$colors, "white");
 }
