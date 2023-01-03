@@ -4,6 +4,7 @@ import bodybuilding from "../../assets/icons/bodybuilding.svg";
 import reflexion from "../../assets/icons/reflexion.svg";
 import swim from "../../assets/icons/swim.svg";
 import { Outlet } from "react-router-dom";
+import SportIcon from "../../components/SportIcon/SportIcon";
 
 export default function Root() {
   const menuItem = ["Accueil", "Profil", "Réglage", "Communauté"];
@@ -26,7 +27,7 @@ export default function Root() {
           <ul>
             {sports.map((sport) => (
               <li key={sports.indexOf(sport)}>
-                <img src={sport} alt="sport icon" />
+                <SportIcon icon={sport} />
               </li>
             ))}
           </ul>

@@ -1,0 +1,9 @@
+.sport-icon {
+  background-color: map-get(v.$colors, "white");
+  @include m.box-sizer(60px, 60px);
+  border-radius: 10px;
+  cursor: v.$cursor-pointer;
+  display: v.$flex;
+  align-items: v.$align-center;
+  justify-content: center;
+}

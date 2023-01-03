@@ -43,16 +43,6 @@
   padding-left: 0;
   height: 40%;
 }
-.drawer li {
-  background-color: #ffffff;
-  width: 60px;
-  height: 60px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .drawer p {
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
@@ -131,6 +121,17 @@
 }
 #error h1 {
   color: #ff0000;
+}
+
+.sport-icon {
+  background-color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 * {
