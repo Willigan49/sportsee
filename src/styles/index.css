@@ -122,6 +122,17 @@
   background-color: #fbfbfb;
 }
 
+#error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#error h1 {
+  color: #ff0000;
+}
+
 * {
   box-sizing: border-box;
   text-decoration: none;

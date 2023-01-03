@@ -1,0 +1,12 @@
+@use "../../styles/utils/variables" as v;
+@use "../../styles/utils/mixins" as m;
+
+#error {
+  @include m.flex-column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  h1 {
+    color: map-get(v.$colors, "red");
+  }
+}
