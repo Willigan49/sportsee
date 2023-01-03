@@ -5,12 +5,21 @@ import "./styles/normalize.css";
 import "./styles/index.css";
 import Root from "./routes/Root/Root";
 import Error from "./routes/Error/Error";
+import Dashboard from "./routes/Dashboard/Dashboard";
+import Home from "./routes/Home/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     errorElement: <Error />,
+    children: [
+      { index: true, element: <Home /> },
+      {
+        path: "/dashboard/:userId",
+        element: <Dashboard />,
+      },
+    ],
   },
 ]);
 

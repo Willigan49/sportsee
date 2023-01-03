@@ -1,6 +1,6 @@
-export default function Home() {
+export default function Dashboard() {
   return (
-    <div className="home">
+    <div className="dashboard">
       <div>
         <h1>
           Bonjour <span className="name">Guillaume</span>

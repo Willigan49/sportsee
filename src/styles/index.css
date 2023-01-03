@@ -51,7 +51,7 @@
   color: #ffffff;
 }
 
-.home {
+.dashboard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,10 +59,10 @@
   width: 100%;
   height: 100%;
 }
-.home span {
+.dashboard span {
   color: #ff0000;
 }
-.home .stats {
+.dashboard .stats {
   margin-top: 30px;
   width: 100%;
   height: 100%;

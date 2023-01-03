@@ -1,7 +1,7 @@
 @use "../../styles/utils/variables" as v;
 @use "../../styles/utils/mixins" as m;
 
-.home {
+.dashboard {
   @include m.flex-column;
   justify-content: v.$space-between;
   padding: 20px 100px 100px;
