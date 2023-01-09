@@ -1,6 +1,3 @@
-@use "../../styles/utils/variables" as v;
-@use "../../styles/utils/mixins" as m;
-
 .header {
   background-color: map-get(v.$colors, "black");
   height: 10vh;

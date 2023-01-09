@@ -1,0 +1,14 @@
+.user-button {
+    border-radius: 10px;
+    background-color: map-get(v.$colors, "red");
+    @include m.box-sizer(150px, 150px);
+    @include m.flex-column;
+    align-items: v.$align-center;
+    justify-content: center;
+    img{
+        width: 25%;
+    }
+    p{
+        color: white;
+    }
+}
