@@ -5,6 +5,12 @@ import reflexion from "../../assets/icons/reflexion.svg";
 import swim from "../../assets/icons/swim.svg";
 import { Outlet } from "react-router-dom";
 import SportIcon from "../../components/SportIcon/SportIcon";
+import getAllUsers from "../../api/user";
+
+export async function usersLoader() {
+  const users = await getAllUsers();
+  return { users };
+}
 
 export default function Root() {
   const menuItem = ["Accueil", "Profil", "Réglage", "Communauté"];
