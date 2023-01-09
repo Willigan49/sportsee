@@ -7,8 +7,9 @@ import { Outlet } from "react-router-dom";
 import SportIcon from "../../components/SportIcon/SportIcon";
 import getAllUsers from "../../api/user";
 
-export async function usersLoader() {
+export async function userLoader() {
   const users = await getAllUsers();
+  console.log(users);
   return { users };
 }
 
@@ -23,7 +24,7 @@ export default function Root() {
         <div className="menu">
           <ul>
             {menuItem.map((item) => (
-              <li>{item}</li>
+              <li key={menuItem.indexOf(item)}>{item}</li>
             ))}
           </ul>
         </div>
