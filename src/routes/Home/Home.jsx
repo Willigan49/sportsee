@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 export default function Home() {
   const { users } = useLoaderData();
+  console.log(users);
 
     return (
       <div className="home">
@@ -12,11 +13,8 @@ export default function Home() {
               {users.map((user) => (
                 <li key={user.id}>
                   <Link to={`/dashboard/${user.id}`}>
-                    {user.firstName || user.lastName ? (
-                      <UserButton
-                        firstName={user.firstName}
-                        lastName={user.lastName}
-                      />
+                    {user.fullName ? (
+                      <UserButton fullName={user.fullName} />
                     ) : (
                       <>
                         <UserButton firstName={"unknown"} lastName={"user"} />

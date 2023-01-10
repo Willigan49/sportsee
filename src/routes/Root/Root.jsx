@@ -5,11 +5,16 @@ import reflexion from "../../assets/icons/reflexion.svg";
 import swim from "../../assets/icons/swim.svg";
 import { Outlet } from "react-router-dom";
 import SportIcon from "../../components/SportIcon/SportIcon";
-import getAllUsers from "../../api/user";
+import { getUser, getAllUsers } from "../../api/user";
 
-export async function userLoader() {
+export async function usersLoader() {
   const users = await getAllUsers();
   return { users };
+}
+
+export async function userLoader({ params }) {
+  const user = await getUser(params.userId);
+  return { user };
 }
 
 export default function Root() {
@@ -37,7 +42,7 @@ export default function Root() {
               </li>
             ))}
           </ul>
-          <p>Copiryght, SportSee 2020</p>
+          <p>Copyright, SportSee 2020</p>
         </div>
         <Outlet />
       </div>

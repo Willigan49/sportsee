@@ -5,7 +5,8 @@
   @include m.flex-column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  width: v.$full-size;
   h1 {
     color: map-get(v.$colors, "red");
   }

@@ -1,4 +1,4 @@
-import { useRouteError } from "react-router-dom";
+import { useRouteError, Link } from "react-router-dom";
 
 export default function Error() {
   const error = useRouteError();
@@ -10,6 +10,7 @@ export default function Error() {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
+      <Link to={'/'}>Revenir à l'accueil</Link>
     </div>
   );
 }

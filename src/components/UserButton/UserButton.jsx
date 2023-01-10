@@ -1,12 +1,11 @@
 import userIcon from "../../assets/icons/user.svg";
 
-export default function UserButton({ firstName, lastName }) {
-  const userFullName = `${firstName} ${lastName}`;
+export default function UserButton({ fullName }) {
 
   return (
     <div className="user-button">
       <img src={userIcon} alt="user icon" />
-      <p>{userFullName}</p>
+      <p>{fullName}</p>
     </div>
   );
 }
