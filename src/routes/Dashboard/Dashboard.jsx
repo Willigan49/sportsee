@@ -4,9 +4,11 @@ import burgerIcon from "../../assets/icons/burger.svg";
 import meatIcon from "../../assets/icons/meat.svg";
 import appleIcon from "../../assets/icons/apple.svg";
 import fireIcon from "../../assets/icons/fire.svg";
+import Score from "../../components/Score/Score";
 
 export default function Dashboard() {
   const { user } = useLoaderData();
+  console.log(user);
 
   return (
     <div className="dashboard">
@@ -22,7 +24,9 @@ export default function Dashboard() {
           <div className="graphics-bottom">
             <div className="duration"></div>
             <div className="radar"></div>
-            <div className="score"></div>
+            <div className="score">
+              <Score score={user.score} label={user.scorePercentage}/>
+            </div>
           </div>
         </div>
         <div className="nutrients">

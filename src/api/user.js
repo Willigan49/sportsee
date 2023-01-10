@@ -34,8 +34,13 @@ export async function getAllUsers() {
   }
 }
 
+//Tout centraliser dans un objet Data
+//Remplacer nom variable "response"
+
 export async function getUser(id) {
   let response = await api.get(`user/${id}`);
+  //let { data } = await api.get(`user/${id}`);
+  //ajouter try catch
   response = new User(
     response.data.data.id,
     response.data.data.userInfos.firstName,
