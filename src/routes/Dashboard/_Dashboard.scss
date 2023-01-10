@@ -4,7 +4,7 @@
 .dashboard {
   @include m.flex-column;
   justify-content: v.$space-between;
-  padding: 20px 100px 100px;
+  padding: 20px 50px 100px;
   @include m.box-sizer(100%, 100%);
   span {
     color: map-get(v.$colors, "red");
@@ -33,20 +33,15 @@
   }
 }
 
-.calories {
+.nutrients {
   @include m.flex-column;
   justify-content: v.$space-between;
   width: 35%;
   gap: 20px;
-  div {
-    border-radius: 10px;
-    background-color: map-get(v.$colors, "grey");
-    @include m.box-sizer(100%, 100%);
-  }
 }
 
 .graphics-bottom {
-  @include m.box-sizer(100%, 85%);
+  @include m.box-sizer(100%, 65%);
   border-radius: 10px;
   display: v.$flex;
   justify-content: v.$space-between;

@@ -1,0 +1,56 @@
+.nutrient {
+  width: v.$full-size;
+  background-color: map-get(v.$colors, "grey");
+  @include m.box-sizer(100%, 100%);
+  display: flex;
+  align-items: v.$align-center;
+  justify-content: space-evenly;
+  gap: 20px;
+  .icon--red {
+    background: rgba(255, 0, 0, 0.1);
+    @include m.box-sizer(60px, 60px);
+    display: flex;
+    justify-content: v.$justify-center;
+    align-items: v.$align-center;
+    border-radius: 6px;
+    margin-left: 20px;
+  }
+  .icon--blue {
+    background: rgba(74, 184, 255, 0.1);
+    @include m.box-sizer(60px, 60px);
+    display: flex;
+    justify-content: v.$justify-center;
+    align-items: v.$align-center;
+    border-radius: 6px;
+    margin-left: 20px;
+  }
+  .icon--yellow {
+    background-color: rgba(255, 255, 0, 0.1);
+    @include m.box-sizer(60px, 60px);
+    display: flex;
+    justify-content: v.$justify-center;
+    align-items: v.$align-center;
+    border-radius: 6px;
+    margin-left: 20px;
+  }
+  .icon--pink {
+    background-color: rgba(255, 0, 120, 0.1);
+    @include m.box-sizer(60px, 60px);
+    display: flex;
+    justify-content: v.$justify-center;
+    align-items: v.$align-center;
+    border-radius: 6px;
+    margin-left: 20px;
+  }
+  .count {
+    line-height: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    width: 50%;
+  }
+  .nutrient-type {
+    font-size: 14px;
+    color: #74798C;
+    font-weight: 500;
+  }
+}
