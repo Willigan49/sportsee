@@ -49,7 +49,7 @@
   @include m.box-sizer(100%, 85%);
   border-radius: 10px;
   display: v.$flex;
-  justify-content: space-between;
+  justify-content: v.$space-between;
   gap: 20px;
   div {
     width: 100%;

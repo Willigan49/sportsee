@@ -9,7 +9,6 @@ import getAllUsers from "../../api/user";
 
 export async function userLoader() {
   const users = await getAllUsers();
-  console.log(users);
   return { users };
 }
 

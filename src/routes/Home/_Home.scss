@@ -1,7 +1,15 @@
 .home {
+  width: 100%;
+  nav {
+    height: 100%;
+    display: flex;
+    justify-content: v.$justify-center;
+  }
+  ul {
     display: flex;
     gap: 10%;
     width: v.$full-size;
-    justify-content: center;
-    align-items: center;
+    justify-content: v.$justify-center;
+    align-items: v.$align-center;
+  }
 }

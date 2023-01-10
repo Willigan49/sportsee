@@ -152,6 +152,14 @@
 }
 
 .home {
+  width: 100%;
+}
+.home nav {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.home ul {
   display: flex;
   gap: 10%;
   width: 100%;

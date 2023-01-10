@@ -1,31 +1,37 @@
 import UserButton from "../../components/UserButton/UserButton";
 import { Link, useLoaderData } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 export default function Home() {
   const { users } = useLoaderData();
 
   return (
     <div className="home">
-      {console.log(users)}
-      {
-        <ul>
-          <li key={users.id}>
-            <Link to={`/dashboard/${users.id}`}>
-              {users.firstName || users.lastName ? (
-                <>
-                  <UserButton
-                    firstName={users.firstName}
-                    lastName={users.lastName}
-                  />
-                </>
-              ) : (
-                <p>No name</p>
-              )}
-            </Link>
-          </li>
-        </ul>
-      }
+      <nav>
+        {users.length ? (
+          <ul>
+            {users.map((user) => (
+              <li key={user.id}>
+                <Link to={`/dashboard/${user.id}`}>
+                  {user.firstName || user.lastName ? (
+                    <UserButton
+                      firstName={user.firstName}
+                      lastName={user.lastName}
+                    />
+                  ) : (
+                    <>
+                      <UserButton firstName={"unknown"} lastName={"user"} />
+                    </>
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>
+            <i>No User...</i>
+          </p>
+        )}
+      </nav>
     </div>
   );
 }
