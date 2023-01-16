@@ -21,7 +21,7 @@ export default function Score({ score, label }) {
         >
           {data.map((entry, index) => {
             if (index === 1) {
-              return <Cell key={`cell-${index}`} fill="#f3f6f9" />; // make sure to map the index to the colour you want
+              return <Cell key={`cell-${index}`} fill="#f3f6f9" />;
             }
             return <Cell key={`cell-${index}`} fill="red" />;
           })}

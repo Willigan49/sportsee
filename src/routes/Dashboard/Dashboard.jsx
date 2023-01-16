@@ -8,7 +8,6 @@ import Score from "../../components/Score/Score";
 
 export default function Dashboard() {
   const { user } = useLoaderData();
-  console.log(user);
 
   return (
     <div className="dashboard">

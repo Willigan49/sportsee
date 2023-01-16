@@ -3,7 +3,6 @@ import { Link, useLoaderData } from "react-router-dom";
 
 export default function Home() {
   const { users } = useLoaderData();
-  console.log(users);
 
     return (
       <div className="home">

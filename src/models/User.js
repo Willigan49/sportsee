@@ -1,24 +1,14 @@
 export default class User {
-  constructor(
-    id,
-    firstName,
-    lastName,
-    age,
-    score,
-    calorieCount,
-    proteinCount,
-    carbohydrateCount,
-    lipidCount
-  ) {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.score = score;
-    this.calorieCount = calorieCount;
-    this.proteinCount = proteinCount;
-    this.carbohydrateCount = carbohydrateCount;
-    this.lipidCount = lipidCount;
+  constructor({ data }) {
+    this.id = data.id;
+    this.firstName = data.userInfos.firstName;
+    this.lastName = data.userInfos.lastName;
+    this.age = data.userInfos.age;
+    this.score = !data.score ? data.todayScore : data.score;
+    this.calorieCount = data.keyData.calorieCount;
+    this.proteinCount = data.keyData.proteinCount;
+    this.carbohydrateCount = data.keyData.carbohydrateCount;
+    this.lipidCount = data.keyData.lipidCount;
   }
 
   get fullName() {
@@ -42,6 +32,6 @@ export default class User {
   }
 
   get scorePercentage() {
-    return `${this.score * 100}%`
+    return `${this.score * 100}%`;
   }
 }
