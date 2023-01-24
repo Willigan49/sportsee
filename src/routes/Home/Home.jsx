@@ -12,11 +12,11 @@ export default function Home() {
               {users.map((user) => (
                 <li key={user.id}>
                   <Link to={`/dashboard/${user.id}`}>
-                    {user.fullName ? (
+                    {user.fullName !== undefined ? (
                       <UserButton fullName={user.fullName} />
                     ) : (
                       <>
-                        <UserButton firstName={"unknown"} lastName={"user"} />
+                        <UserButton fullName={"unknown user"} />
                       </>
                     )}
                   </Link>

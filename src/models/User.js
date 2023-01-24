@@ -1,37 +1,38 @@
 export default class User {
-  constructor({ data }) {
-    this.id = data.id;
-    this.firstName = data.userInfos.firstName;
-    this.lastName = data.userInfos.lastName;
-    this.age = data.userInfos.age;
-    this.score = !data.score ? data.todayScore : data.score;
-    this.calorieCount = data.keyData.calorieCount;
-    this.proteinCount = data.keyData.proteinCount;
-    this.carbohydrateCount = data.keyData.carbohydrateCount;
-    this.lipidCount = data.keyData.lipidCount;
+  constructor(infoData, activityData, sessionData, performanceData) {
+    this.id = infoData.data.data.id;
+    this.userInfos = infoData.data.data.userInfos;
+    this.dayScore = !infoData.data.data.todayScore
+      ? infoData.data.data.score
+      : infoData.data.data.todayScore;
+    this.counts = infoData.data.data.keyData;
+    this.activities = activityData.data.data.sessions;
+    this.averages = sessionData.data.data.sessions;
+    this.performanceKinds = performanceData.data.data.kind;
+    this.performances = performanceData.data.data.data;
   }
 
   get fullName() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.userInfos.firstName} ${this.userInfos.lastName}`;
   }
 
   get calories() {
-    return `${this.calorieCount} kCal`;
+    return `${this.counts.calorieCount} kCal`;
   }
 
   get proteins() {
-    return `${this.proteinCount} g`;
+    return `${this.counts.proteinCount} g`;
   }
 
   get carbohydrates() {
-    return `${this.carbohydrateCount} g`;
+    return `${this.counts.carbohydrateCount} g`;
   }
 
   get lipids() {
-    return `${this.lipidCount} g`;
+    return `${this.counts.lipidCount} g`;
   }
 
   get scorePercentage() {
-    return `${this.score * 100}%`;
+    return `${this.dayScore * 100}%`;
   }
 }

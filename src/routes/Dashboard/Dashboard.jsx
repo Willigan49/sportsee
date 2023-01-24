@@ -5,6 +5,7 @@ import meatIcon from "../../assets/icons/meat.svg";
 import appleIcon from "../../assets/icons/apple.svg";
 import fireIcon from "../../assets/icons/fire.svg";
 import Score from "../../components/Score/Score";
+import DailyActivities from "../../components/DailyActivities/DailyActivities";
 
 export default function Dashboard() {
   const { user } = useLoaderData();
@@ -13,18 +14,20 @@ export default function Dashboard() {
     <div className="dashboard">
       <div>
         <h1>
-          Bonjour <span className="name">{user.firstName}</span>
+          Bonjour <span className="name">{user.userInfos.firstName}</span>
         </h1>
         <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
       </div>
       <div className="stats">
         <div className="graphics">
-          <div className="daily-activities"></div>
+          <div className="daily-activities">
+            <DailyActivities activities={user.activities} />
+          </div>
           <div className="graphics-bottom">
             <div className="duration"></div>
             <div className="radar"></div>
             <div className="score">
-              <Score score={user.score} label={user.scorePercentage}/>
+              <Score score={user.dayScore} label={user.scorePercentage} />
             </div>
           </div>
         </div>
