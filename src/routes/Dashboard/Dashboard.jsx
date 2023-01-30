@@ -6,6 +6,7 @@ import appleIcon from "../../assets/icons/apple.svg";
 import fireIcon from "../../assets/icons/fire.svg";
 import Score from "../../components/Score/Score";
 import DailyActivities from "../../components/DailyActivities/DailyActivities";
+import AverageChart from "../../components/AverageChart/AverageChart";
 
 export default function Dashboard() {
   const { user } = useLoaderData();
@@ -24,7 +25,9 @@ export default function Dashboard() {
             <DailyActivities activities={user.activities} />
           </div>
           <div className="graphics-bottom">
-            <div className="duration"></div>
+            <div className="average">
+              <AverageChart averages={user.averages} />
+            </div>
             <div className="radar"></div>
             <div className="score">
               <Score score={user.dayScore} label={user.scorePercentage} />
