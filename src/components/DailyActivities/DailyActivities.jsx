@@ -21,8 +21,6 @@ export default function DailyActivities({ activities }) {
   });
 
   return (
-    <>
-      <p className="barchart-title">Activité quotidienne</p>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
@@ -71,8 +69,15 @@ export default function DailyActivities({ activities }) {
             fill="#E60000"
             radius={[4, 4, 0, 0]}
           />
+          <text
+            x="5%"
+            y="13%"
+            textAnchor="start"
+            dominantBaseline="middle"
+          >
+            Activité quotidienne
+          </text>
         </BarChart>
       </ResponsiveContainer>
-    </>
   );
 }

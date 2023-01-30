@@ -234,6 +234,10 @@
   left: 20px;
 }
 
+.pie-legend {
+  font-size: 12px;
+}
+
 * {
   box-sizing: border-box;
   text-decoration: none;
