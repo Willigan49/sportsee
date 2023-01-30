@@ -106,6 +106,10 @@
   background-color: #fbfbfb;
 }
 
+.daily-activities {
+  position: relative;
+}
+
 #error {
   display: flex;
   flex-direction: column;
@@ -222,6 +226,12 @@
   font-size: 14px;
   color: #74798C;
   font-weight: 500;
+}
+
+.barchart-title {
+  position: absolute;
+  top: 14px;
+  left: 20px;
 }
 
 * {
