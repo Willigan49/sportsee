@@ -44,8 +44,7 @@
   height: 40%;
 }
 .drawer p {
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
   transform: rotate(-180deg);
   font-size: 12px;
   color: #ffffff;
@@ -234,8 +233,29 @@
   left: 20px;
 }
 
+.tooltip-activity {
+  background-color: #ff0000;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+
 .pie-legend {
   font-size: 12px;
+}
+
+.tooltip-session {
+  background-color: white;
+  width: 10px;
+  height: 25px;
+  border-style: none;
+}
+.tooltip-session p {
+  margin: 0;
 }
 
 * {

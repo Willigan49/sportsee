@@ -18,6 +18,17 @@ export default function DailyActivities({ activities }) {
     };
   });
 
+  const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="tooltip-activity">
+          <p>{payload[0].value} kg</p>
+          <p>{payload[1].value} kcal</p>
+        </div>
+      );
+    }
+  };
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart
@@ -45,7 +56,7 @@ export default function DailyActivities({ activities }) {
           tickMargin={20}
           tickCount={3}
         />
-        <Tooltip />
+        <Tooltip content={<CustomTooltip />} />
         <Legend
           verticalAlign="top"
           align="right"
@@ -74,3 +85,5 @@ export default function DailyActivities({ activities }) {
     </ResponsiveContainer>
   );
 }
+
+//reduire taille tooltip

@@ -3,3 +3,14 @@
     top: 14px;
     left: 20px;
 }
+
+.tooltip-activity{
+    background-color: map-get(v.$colors, "red");
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: map-get(v.$colors, "white");
+    border-radius: 5px;
+    border: none;
+}

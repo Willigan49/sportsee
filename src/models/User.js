@@ -12,6 +12,14 @@ export default class User {
     this.performances = performanceData.data.data.data;
   }
 
+  get fullPerformances() {
+    const result = this.performances.map((value, index) => ({
+      value: value.value,
+      performance: this.performanceKinds[index + 1],
+    }));
+    return result;
+  }
+
   get fullName() {
     return `${this.userInfos.firstName} ${this.userInfos.lastName}`;
   }
