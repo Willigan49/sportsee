@@ -1,4 +1,5 @@
 import { PieChart, Pie, ResponsiveContainer, Cell, Label } from "recharts";
+import PropTypes from "prop-types";
 
 export default function ScoreChart({ score, label }) {
   const text = {
@@ -69,3 +70,8 @@ export default function ScoreChart({ score, label }) {
     </ResponsiveContainer>
   );
 }
+
+ScoreChart.proptype = {
+  score: PropTypes.array.isRequired,
+  label: PropTypes.string.isRequired,
+};

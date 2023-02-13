@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function NutrientCount({
   nutrientCount,
   icon,
@@ -6,9 +8,9 @@ export default function NutrientCount({
 }) {
   return (
     <div className="nutrient">
-        <div className={`icon--${color}`}>
-          <img src={icon} alt="nutrient icon" />
-        </div>
+      <div className={`icon--${color}`}>
+        <img src={icon} alt="nutrient icon" />
+      </div>
       <div className="count">
         <p>{nutrientCount}</p>
         <p className="nutrient-type">{nutrientType}</p>
@@ -16,3 +18,10 @@ export default function NutrientCount({
     </div>
   );
 }
+
+NutrientCount.prototype = {
+  nutrientCount: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  nutrientType: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+};

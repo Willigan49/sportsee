@@ -1,7 +1,7 @@
 import userIcon from "../../assets/icons/user.svg";
+import PropTypes from "prop-types";
 
 export default function UserButton({ fullName }) {
-
   return (
     <div className="user-button">
       <img src={userIcon} alt="user icon" />
@@ -9,3 +9,7 @@ export default function UserButton({ fullName }) {
     </div>
   );
 }
+
+UserButton.proptype = {
+  fullName: PropTypes.string.isRequired,
+};

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function SportIcon({ icon }) {
   return (
     <div className="sport-icon">
@@ -5,3 +7,7 @@ export default function SportIcon({ icon }) {
     </div>
   );
 }
+
+SportIcon.proptype = {
+  icon: PropTypes.string.isRequired,
+};

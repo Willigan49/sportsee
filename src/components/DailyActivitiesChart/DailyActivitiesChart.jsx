@@ -8,6 +8,7 @@ import {
   Bar,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
 
 export default function DailyActivitiesChart({ activities }) {
   const data = activities.map((activity, index) => {
@@ -44,12 +45,7 @@ export default function DailyActivitiesChart({ activities }) {
         }}
       >
         <CartesianGrid strokeDasharray="2" vertical={false} />
-        <XAxis
-          dataKey="name"
-          tickLine={false}
-          tickMargin={10}
-          fontSize={12}
-        />
+        <XAxis dataKey="name" tickLine={false} tickMargin={10} fontSize={12} />
         <YAxis dataKey="kCal" yAxisId="kCal" hide={true} />
         <YAxis
           yAxisId="kg"
@@ -85,10 +81,20 @@ export default function DailyActivitiesChart({ activities }) {
           fill="#E60000"
           radius={[4, 4, 0, 0]}
         />
-        <text x="5%" y="13%" textAnchor="start" dominantBaseline="middle" fontSize={15}>
+        <text
+          x="5%"
+          y="13%"
+          textAnchor="start"
+          dominantBaseline="middle"
+          fontSize={15}
+        >
           Activité quotidienne
         </text>
       </BarChart>
     </ResponsiveContainer>
   );
 }
+
+DailyActivitiesChart.propTypes = {
+  activities: PropTypes.array.isRequired,
+};

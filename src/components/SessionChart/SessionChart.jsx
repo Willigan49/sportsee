@@ -7,9 +7,9 @@ import {
   YAxis,
   Rectangle,
 } from "recharts";
+import PropTypes from "prop-types";
 
 export default function SessionChart({ averages }) {
-  console.log(averages);
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
@@ -68,3 +68,7 @@ export default function SessionChart({ averages }) {
     </ResponsiveContainer>
   );
 }
+
+SessionChart.proptype = {
+  averages: PropTypes.array.isRequired,
+};

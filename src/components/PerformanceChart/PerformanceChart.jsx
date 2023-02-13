@@ -5,6 +5,7 @@ import {
   Radar,
   PolarGrid,
 } from "recharts";
+import PropTypes from "prop-types";
 
 export default function PerformanceChart({ performances }) {
   return (
@@ -32,4 +33,8 @@ export default function PerformanceChart({ performances }) {
       </RadarChart>
     </ResponsiveContainer>
   );
+}
+
+PerformanceChart.prototype = {
+  performances: PropTypes.array.isRequired
 }
