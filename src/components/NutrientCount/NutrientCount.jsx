@@ -1,4 +1,4 @@
-export default function Nutrients({
+export default function NutrientCount({
   nutrientCount,
   icon,
   nutrientType,

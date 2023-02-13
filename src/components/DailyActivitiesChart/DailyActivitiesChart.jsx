@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function DailyActivities({ activities }) {
+export default function DailyActivitiesChart({ activities }) {
   const data = activities.map((activity, index) => {
     return {
       name: (index += 1).toString(),
@@ -44,7 +44,12 @@ export default function DailyActivities({ activities }) {
         }}
       >
         <CartesianGrid strokeDasharray="2" vertical={false} />
-        <XAxis dataKey="name" tickLine={false} tickMargin={10} />
+        <XAxis
+          dataKey="name"
+          tickLine={false}
+          tickMargin={10}
+          fontSize={12}
+        />
         <YAxis dataKey="kCal" yAxisId="kCal" hide={true} />
         <YAxis
           yAxisId="kg"
@@ -55,6 +60,8 @@ export default function DailyActivities({ activities }) {
           axisLine={false}
           tickMargin={20}
           tickCount={3}
+          fontSize={12}
+          color="#9B9EAC"
         />
         <Tooltip content={<CustomTooltip />} />
         <Legend
@@ -78,7 +85,7 @@ export default function DailyActivities({ activities }) {
           fill="#E60000"
           radius={[4, 4, 0, 0]}
         />
-        <text x="5%" y="13%" textAnchor="start" dominantBaseline="middle">
+        <text x="5%" y="13%" textAnchor="start" dominantBaseline="middle" fontSize={15}>
           Activité quotidienne
         </text>
       </BarChart>

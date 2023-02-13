@@ -6,6 +6,7 @@
 
 .tooltip-activity{
     background-color: map-get(v.$colors, "red");
+    font-size: 10px;
     padding: 10px;
     display: flex;
     flex-direction: column;

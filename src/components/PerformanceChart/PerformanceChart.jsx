@@ -6,7 +6,7 @@ import {
   PolarGrid,
 } from "recharts";
 
-export default function Performance({ performances }) {
+export default function PerformanceChart({ performances }) {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <RadarChart data={performances} cx="50%" cy="50%" outerRadius="80%">

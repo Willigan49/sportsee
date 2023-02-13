@@ -1,13 +1,13 @@
 import { useLoaderData } from "react-router-dom";
-import Nutrients from "../../components/Nutrients/Nutrients";
+import NutrientCount from "../../components/NutrientCount/NutrientCount";
 import burgerIcon from "../../assets/icons/burger.svg";
 import meatIcon from "../../assets/icons/meat.svg";
 import appleIcon from "../../assets/icons/apple.svg";
 import fireIcon from "../../assets/icons/fire.svg";
-import Score from "../../components/Score/Score";
-import DailyActivities from "../../components/DailyActivities/DailyActivities";
-import AverageChart from "../../components/AverageChart/AverageChart";
-import Performance from "../../components/Performance/Performance";
+import ScoreChart from "../../components/ScoreChart/ScoreChart";
+import DailyActivitiesChart from "../../components/DailyActivitiesChart/DailyActivitiesChart";
+import SessionChart from "../../components/SessionChart/SessionChart";
+import PerformanceChart from "../../components/PerformanceChart/PerformanceChart";
 
 export default function Dashboard() {
   const { user } = useLoaderData();
@@ -23,40 +23,40 @@ export default function Dashboard() {
       <div className="stats">
         <div className="graphics">
           <div className="daily-activities">
-            <DailyActivities activities={user.activities} />
+            <DailyActivitiesChart activities={user.activities} />
           </div>
           <div className="graphics-bottom">
             <div className="average">
-              <AverageChart averages={user.averages} />
+              <SessionChart averages={user.averages} />
             </div>
             <div className="radar">
-              <Performance performances={user.fullPerformances}/>
+              <PerformanceChart performances={user.fullPerformances} />
             </div>
             <div className="score">
-              <Score score={user.dayScore} label={user.scorePercentage} />
+              <ScoreChart score={user.dayScore} label={user.scorePercentage} />
             </div>
           </div>
         </div>
         <div className="nutrients">
-          <Nutrients
+          <NutrientCount
             nutrientCount={user.calories}
             icon={fireIcon}
             nutrientType="Calories"
             color="red"
           />
-          <Nutrients
+          <NutrientCount
             nutrientCount={user.proteins}
             icon={meatIcon}
             nutrientType="Proteines"
             color="blue"
           />
-          <Nutrients
+          <NutrientCount
             nutrientCount={user.carbohydrates}
             icon={appleIcon}
             nutrientType="Glucides"
             color="yellow"
           />
-          <Nutrients
+          <NutrientCount
             nutrientCount={user.lipids}
             icon={burgerIcon}
             nutrientType="Lipides"

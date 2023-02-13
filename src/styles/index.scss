@@ -7,11 +7,11 @@
 @import "../components/SportIcon/SportIcon";
 @import "../components/UserButton/UserButton";
 @import "../routes/Home/Home";
-@import "../components/Nutrients/Nutrients";
-@import "../components/DailyActivities/DailyActivities";
-@import "../components/Score/Score";
-@import "../components/Performance/Performance";
-@import "../components/AverageChart/AverageChart";
+@import "../components/NutrientCount/NutrientCount";
+@import "../components/DailyActivitiesChart/DailyActivitiesChart";
+@import "../components/ScoreChart/ScoreChart";
+@import "../components/PerformanceChart/PerformanceChart";
+@import "../components/SessionChart/SessionChart";
 * {
   box-sizing: border-box;
   text-decoration: none;

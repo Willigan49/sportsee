@@ -8,7 +8,7 @@ import {
   Rectangle,
 } from "recharts";
 
-export default function AverageChart({ averages }) {
+export default function SessionChart({ averages }) {
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (

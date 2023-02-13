@@ -1,6 +1,6 @@
 import { PieChart, Pie, ResponsiveContainer, Cell, Label } from "recharts";
 
-export default function Score({ score, label }) {
+export default function ScoreChart({ score, label }) {
   const text = {
     x: "39%",
     fill: "#74798C",
