@@ -92,5 +92,3 @@ export default function DailyActivitiesChart({ activities }) {
     </ResponsiveContainer>
   );
 }
-
-//reduire taille tooltip

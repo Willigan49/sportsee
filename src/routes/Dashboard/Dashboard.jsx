@@ -67,4 +67,3 @@ export default function Dashboard() {
     </div>
   );
 }
-//Felicitation en gras

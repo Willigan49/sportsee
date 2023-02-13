@@ -11,13 +11,14 @@ export default function ScoreChart({ score, label }) {
   ];
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <PieChart width={730} height={250}>
+      <PieChart width="100%" height="100%">
         <text
           className="pie-title"
           x="10%"
           y="12%"
           textAnchor="start"
           dominantBaseline="middle"
+          fontSize={15}
         >
           Score
         </text>
@@ -40,7 +41,16 @@ export default function ScoreChart({ score, label }) {
         >
           {data.map((entry, index) => {
             if (index === 1) {
-              return <Cell key={`cell-${index}`} fill="#f3f6f9" />;
+              return (
+                <Cell
+                  key={`cell-${index}`}
+                  fill="#fbfbfb"
+                  isAnimationActive={false}
+                  outerRadius={180}
+                  cx="50%"
+                  cy="50%"
+                />
+              );
             }
             return <Cell key={`cell-${index}`} fill="red" />;
           })}

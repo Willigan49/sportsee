@@ -23,9 +23,10 @@ export default class User {
   }
 
   get fullPerformances() {
+    const translate = ["Cardio", "Energie", "Endurance", "Force", "Vitesse", "Intensité"]
     const result = this.performances.map((value, index) => ({
       value: value.value,
-      performance: this.performanceKinds[index + 1],
+      performance: translate[value.kind - 1],
     }));
     return result;
   }

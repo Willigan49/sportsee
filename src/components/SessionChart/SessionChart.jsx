@@ -68,7 +68,3 @@ export default function SessionChart({ averages }) {
     </ResponsiveContainer>
   );
 }
-
-//texte trop gros
-//revoir les couleurs
-// reduire les echelles

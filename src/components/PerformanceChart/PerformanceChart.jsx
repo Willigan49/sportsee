@@ -9,21 +9,27 @@ import {
 export default function PerformanceChart({ performances }) {
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <RadarChart data={performances} cx="50%" cy="50%" outerRadius="80%">
-        <PolarAngleAxis dataKey="performance" />
+      <RadarChart
+        data={performances}
+        cx="50%"
+        cy="50%"
+        outerRadius="80%"
+        margin={{ left: 40, right: 40 }}
+        style={{ backgroundColor: "#282D30", borderRadius: 5 }}
+      >
+        <PolarAngleAxis
+          dataKey="performance"
+          tick={{ fill: "#FFFFFF", fontSize: 10 }}
+          dy={5}
+        />
         <Radar
           dataKey="value"
-          stroke="#8884d8"
-          fill="#8884d8"
-          fillOpacity={0.6}
+          stroke="#FF0101B2"
+          fill="#FF0101B2"
+          fillOpacity={0.9}
         />
-        <PolarGrid />
+        <PolarGrid radialLines={false} />
       </RadarChart>
     </ResponsiveContainer>
   );
 }
-
-//background noir
-//pas de lignes convergentes
-//couleur du graphique rouge
-//integralité des mots
