@@ -100,7 +100,7 @@
   justify-content: space-between;
   gap: 20px;
 }
-.graphics-bottom div {
+.graphics-bottom .average, .graphics-bottom .radar, .graphics-bottom .score {
   width: 100%;
   background-color: #fbfbfb;
 }
@@ -251,12 +251,12 @@
 
 .tooltip-session {
   background-color: white;
-  width: 10px;
-  height: 25px;
+  padding: 2px;
   border-style: none;
+  border-radius: 5px;
 }
 .tooltip-session p {
-  margin: 0;
+  font-size: 12px;
 }
 
 * {

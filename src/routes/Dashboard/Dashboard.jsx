@@ -27,7 +27,7 @@ export default function Dashboard() {
           </div>
           <div className="graphics-bottom">
             <div className="average">
-              <SessionChart averages={user.averages} />
+              <SessionChart averages={user.sessionsWithDays} />
             </div>
             <div className="radar">
               <PerformanceChart performances={user.fullPerformances} />

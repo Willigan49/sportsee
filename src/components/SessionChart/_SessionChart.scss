@@ -1,9 +1,9 @@
 .tooltip-session {
   background-color: white;
-  width: 10px;
-  height: 25px;
+  padding: 2px;
   border-style: none;
+  border-radius: 5px;
   p {
-    margin: 0;
+    font-size: 12px;
   }
 }

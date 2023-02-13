@@ -12,6 +12,16 @@ export default class User {
     this.performances = performanceData.data.data.data;
   }
 
+  get sessionsWithDays() {
+    const days = ["L", "M", "M", "J", "V", "S", "D"];
+    const result = this.averages.map((session) => ({
+      day: session.day,
+      sessionLength: session.sessionLength,
+      dayLetter: days[session.day - 1],
+    }));
+    return result;
+  }
+
   get fullPerformances() {
     const result = this.performances.map((value, index) => ({
       value: value.value,

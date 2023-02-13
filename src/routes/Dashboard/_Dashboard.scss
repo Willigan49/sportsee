@@ -46,7 +46,7 @@
   display: v.$flex;
   justify-content: v.$space-between;
   gap: 20px;
-  div {
+  .average, .radar, .score {
     width: 100%;
     background-color: map-get(v.$colors, "grey");
   }
