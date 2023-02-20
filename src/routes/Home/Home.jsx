@@ -1,34 +1,29 @@
 import UserButton from "../../components/UserButton/UserButton";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  const { users } = useLoaderData();
 
-    return (
-      <div className="home">
-        <nav>
-          {users.length ? (
-            <ul>
-              {users.map((user) => (
-                <li key={user.id}>
-                  <Link to={`/dashboard/${user.id}`}>
-                    {user.fullName !== undefined ? (
-                      <UserButton fullName={user.fullName} />
-                    ) : (
-                      <>
-                        <UserButton fullName={"unknown user"} />
-                      </>
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>
-              <i>No User...</i>
-            </p>
-          )}
-        </nav>
-      </div>
-    );
+  return (
+    <div className="home">
+      <nav>
+        <ul>
+          <li>
+            <Link to={`/dashboard/12`}>
+              <UserButton fullName={"Karl Dovineau"} />
+            </Link>
+          </li>
+          <li>
+            <Link to={`/dashboard/18`}>
+              <UserButton fullName={"Cecilia Ratorez"} />
+            </Link>
+          </li>
+          <li>
+            <Link to={`/dashboard/10`}>
+              <UserButton fullName={"Mock"} />
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 }

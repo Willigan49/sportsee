@@ -1,15 +1,15 @@
 export default class User {
   constructor(infoData, activityData, sessionData, performanceData) {
-    this.id = infoData.data.data.id;
-    this.userInfos = infoData.data.data.userInfos;
-    this.dayScore = !infoData.data.data.todayScore
-      ? infoData.data.data.score
-      : infoData.data.data.todayScore;
-    this.counts = infoData.data.data.keyData;
-    this.activities = activityData.data.data.sessions;
-    this.averages = sessionData.data.data.sessions;
-    this.performanceKinds = performanceData.data.data.kind;
-    this.performances = performanceData.data.data.data;
+    this.id = infoData.data.id;
+    this.userInfos = infoData.data.userInfos;
+    this.dayScore = !infoData.data.todayScore
+      ? infoData.data.score
+      : infoData.data.todayScore;
+    this.counts = infoData.data.keyData;
+    this.activities = activityData.data.sessions;
+    this.averages = sessionData.data.sessions;
+    this.performanceKinds = performanceData.data.kind;
+    this.performances = performanceData.data.data;
   }
 
   get sessionsWithDays() {
