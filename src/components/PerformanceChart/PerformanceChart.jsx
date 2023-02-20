@@ -7,6 +7,11 @@ import {
 } from "recharts";
 import PropTypes from "prop-types";
 
+/**
+ * display performance chart component
+ * @param {array} performances 
+ * @returns {JSX.Element} React component
+ */
 export default function PerformanceChart({ performances }) {
   return (
     <ResponsiveContainer width="100%" height="100%">

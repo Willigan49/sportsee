@@ -7,11 +7,20 @@ import { Outlet } from "react-router-dom";
 import SportIcon from "../../components/SportIcon/SportIcon";
 import { getMockOrData } from "../../api/user";
 
+/**
+ * fetch data from API
+ * @param {object} params 
+ * @returns {array} user
+ */
 export async function userLoader({ params }) {
   const user = await getMockOrData(params.userId);
   return { user };
 }
 
+/**
+ * Display Main page
+ * @returns {JSX.Element} root
+ */
 export default function Root() {
   const menuItem = ["Accueil", "Profil", "Réglage", "Communauté"];
   const sports = [reflexion, swim, bike, bodybuilding];

@@ -1,6 +1,10 @@
 import UserButton from "../../components/UserButton/UserButton";
 import { Link } from "react-router-dom";
 
+/**
+ * display home page
+ * @returns {JSX.Element} home page
+ */
 export default function Home() {
 
   return (

@@ -1,6 +1,12 @@
 import { PieChart, Pie, ResponsiveContainer, Cell, Label } from "recharts";
 import PropTypes from "prop-types";
 
+/**
+ * display score component
+ * @param {string} score
+ * @param {string} label
+ * @return {JSX.Element} React component
+ */
 export default function ScoreChart({ score, label }) {
   const text = {
     x: "39%",

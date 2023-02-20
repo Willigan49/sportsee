@@ -9,6 +9,10 @@ import DailyActivitiesChart from "../../components/DailyActivitiesChart/DailyAct
 import SessionChart from "../../components/SessionChart/SessionChart";
 import PerformanceChart from "../../components/PerformanceChart/PerformanceChart";
 
+/**
+ * Display dashboard page
+ * @returns {JSX.Element} dashboard page
+ */
 export default function Dashboard() {
   const { user } = useLoaderData();
 

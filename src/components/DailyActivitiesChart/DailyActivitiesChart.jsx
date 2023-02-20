@@ -10,6 +10,11 @@ import {
 } from "recharts";
 import PropTypes from "prop-types";
 
+/**
+ * Display a barchart with activities data
+ * @param {array} activities
+ * @returns {JSX.Element} DailyActivities component
+ */
 export default function DailyActivitiesChart({ activities }) {
   const data = activities.map((activity, index) => {
     return {
@@ -19,6 +24,12 @@ export default function DailyActivitiesChart({ activities }) {
     };
   });
 
+  /**
+   *
+   * @param {boolean} active
+   * @param {array} payload
+   * @returns an active tooltip
+   */
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (

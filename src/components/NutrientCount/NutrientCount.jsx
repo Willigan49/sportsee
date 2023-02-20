@@ -1,5 +1,13 @@
 import PropTypes from "prop-types";
 
+/**
+ * Display nutrient count component
+ * @param {string} nutrientCount
+ * @param {string} icon
+ * @param {string} nutrientType
+ * @param {string} color
+ * @returns {JSX.Element} nutrient count component
+ */
 export default function NutrientCount({
   nutrientCount,
   icon,

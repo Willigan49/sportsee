@@ -1,5 +1,9 @@
 import { useRouteError, Link } from "react-router-dom";
 
+/**
+ * Display error page
+ * @returns {JSX.element}
+ */
 export default function Error() {
   const error = useRouteError();
 

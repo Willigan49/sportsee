@@ -9,7 +9,19 @@ import {
 } from "recharts";
 import PropTypes from "prop-types";
 
+/**
+ * display session chart component
+ * @param {array} averages 
+ * @returns {JSX.Element} React component
+ */
 export default function SessionChart({ averages }) {
+
+  /**
+ * custom the tooltip
+ * @param {boolean} active
+ * @param {array} payload
+ * @returns {JSX.Element} tooltip
+ */
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
@@ -20,6 +32,11 @@ export default function SessionChart({ averages }) {
     }
   };
 
+   /**
+ * custom the tooltip
+ * @param {array} points
+ * @returns {JSX.Element} custom cursor
+ */
   const CustomCursor = ({ points }) => {
     return (
       <Rectangle
