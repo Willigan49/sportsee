@@ -4,25 +4,33 @@
 
 Sportsee helps you track your sports goals by offering you an overview of your performance
 
-## Technologies
+## 1. Prerequisites
+
+- [NodeJS (**version 18.13**)](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/)
+- [React (**v 18.2.0**)](https://fr.reactjs.org/)
+- [React Router(** v 6.4 **)](https://reactrouter.com/en/main)
+
+## 2. Technologies
 
 - JS
 - HTML
 - SASS / CSS
 
-## Author
+## 3.Author
 
 Guillaume Gernigon
 
-## Licensing
+## 4. Licensing
 
 This project was built under the Creative Commons licence.
 
-## How to use Sportsee ?
+## 5 How to use Sportsee ?
 
-### `npm start`
+1. Clone project on your desktop.
+2. use `npm i` for install dependencies.
+3. the `npm run start` command will run your application.
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
